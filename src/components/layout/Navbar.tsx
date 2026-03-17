@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X } from 'lucide-react'
@@ -66,10 +67,17 @@ export function Navbar() {
           {/* Logo */}
           <Link
             href="/"
-            className="font-display text-xl font-bold text-gradient-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded"
+            className="focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded"
             aria-label="Rare Formaturas — Ir para a página inicial"
           >
-            Rare
+            <Image
+              src="/images/logo/logo-rare.png"
+              alt="Rare Formaturas"
+              width={110}
+              height={30}
+              className="h-8 w-auto"
+              priority
+            />
           </Link>
 
           {/* Desktop links */}

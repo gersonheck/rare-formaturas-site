@@ -10,6 +10,7 @@ interface HeroProps {
   subheadline: string
   ctaText?: string
   ctaContext?: Parameters<typeof getWhatsAppUrl>[0]
+  backgroundVideo?: string
   backgroundImage?: string
 }
 
@@ -32,6 +33,7 @@ export function Hero({
   subheadline,
   ctaText = 'Falar com a Rare no WhatsApp',
   ctaContext = 'default',
+  backgroundVideo,
   backgroundImage,
 }: HeroProps) {
   return (
@@ -44,14 +46,27 @@ export function Hero({
         className="absolute inset-0 bg-secondary-deep"
         aria-hidden="true"
       >
-        {backgroundImage && (
+        {/* Video background */}
+        {backgroundVideo && (
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover opacity-40"
+          >
+            <source src={backgroundVideo} type="video/mp4" />
+          </video>
+        )}
+        {/* Fallback image */}
+        {!backgroundVideo && backgroundImage && (
           <div
             className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
             style={{ backgroundImage: `url(${backgroundImage})` }}
           />
         )}
         {/* Gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-secondary-deep via-secondary/80 to-secondary-deep" />
+        <div className="absolute inset-0 bg-gradient-to-b from-secondary-deep/60 via-secondary/80 to-secondary-deep" />
         {/* Gold accent radial */}
         <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-primary/5 blur-3xl" />
       </div>

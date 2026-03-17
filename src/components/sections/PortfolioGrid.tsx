@@ -14,16 +14,15 @@ interface PortfolioItem {
   imageAlt: string
 }
 
-// Placeholder portfolio items — replace with real data / CMS fetch
 const PORTFOLIO_ITEMS: PortfolioItem[] = [
-  { id: '1', year: 2024, title: 'Formatura de Direito', institution: 'Univali Itajaí', imageUrl: '/images/portfolio/2024-direito.jpg', imageAlt: 'Formandos de Direito da Univali em 2024' },
-  { id: '2', year: 2024, title: 'Formatura de Medicina', institution: 'Univali Itajaí', imageUrl: '/images/portfolio/2024-medicina.jpg', imageAlt: 'Formandos de Medicina da Univali em 2024' },
-  { id: '3', year: 2023, title: 'Formatura de Engenharia Civil', institution: 'IESC Itajaí', imageUrl: '/images/portfolio/2023-civil.jpg', imageAlt: 'Formandos de Engenharia Civil em 2023' },
-  { id: '4', year: 2023, title: 'Colação de Grau', institution: 'SENAI Navegantes', imageUrl: '/images/portfolio/2023-senai.jpg', imageAlt: 'Colação de grau SENAI Navegantes 2023' },
-  { id: '5', year: 2022, title: 'Formatura de Administração', institution: 'FURB Blumenau', imageUrl: '/images/portfolio/2022-adm.jpg', imageAlt: 'Formandos de Administração da FURB em 2022' },
-  { id: '6', year: 2022, title: 'Formatura de Psicologia', institution: 'Univali Itajaí', imageUrl: '/images/portfolio/2022-psicologia.jpg', imageAlt: 'Formandos de Psicologia da Univali em 2022' },
-  { id: '7', year: 2021, title: 'Formatura de Contábeis', institution: 'FURB Blumenau', imageUrl: '/images/portfolio/2021-contabeis.jpg', imageAlt: 'Formandos de Ciências Contábeis 2021' },
-  { id: '8', year: 2021, title: 'Colação de Grau', institution: 'Univali Balneário', imageUrl: '/images/portfolio/2021-colacao.jpg', imageAlt: 'Colação de grau Univali 2021' },
+  { id: '1', year: 2024, title: 'Formatura de Direito', institution: 'Univali Itajaí', imageUrl: '/images/portfolio/direito-2024.jpg', imageAlt: 'Formandos de Direito da Univali em 2024' },
+  { id: '2', year: 2024, title: 'Formatura de Medicina', institution: 'Univali Itajaí', imageUrl: '/images/portfolio/medicina-2024.jpg', imageAlt: 'Formandos de Medicina da Univali em 2024' },
+  { id: '3', year: 2023, title: 'Formatura de Engenharia Civil', institution: 'IESC Itajaí', imageUrl: '/images/portfolio/engenharia-2023.jpg', imageAlt: 'Formandos de Engenharia Civil em 2023' },
+  { id: '4', year: 2023, title: 'Colação de Grau', institution: 'SENAI Navegantes', imageUrl: '/images/portfolio/colacao-senai-2023.jpg', imageAlt: 'Colação de grau SENAI Navegantes 2023' },
+  { id: '5', year: 2022, title: 'Formatura de Administração', institution: 'FURB Blumenau', imageUrl: '/images/portfolio/administracao-2022.jpg', imageAlt: 'Formandos de Administração da FURB em 2022' },
+  { id: '6', year: 2022, title: 'Formatura de Psicologia', institution: 'Univali Itajaí', imageUrl: '/images/portfolio/psicologia-2022.jpg', imageAlt: 'Formandos de Psicologia da Univali em 2022' },
+  { id: '7', year: 2021, title: 'Formatura de Contábeis', institution: 'FURB Blumenau', imageUrl: '/images/portfolio/contabeis-2021.jpg', imageAlt: 'Formandos de Ciências Contábeis 2021' },
+  { id: '8', year: 2021, title: 'Colação de Grau', institution: 'Univali Balneário', imageUrl: '/images/portfolio/colacao-univali-2021.jpg', imageAlt: 'Colação de grau Univali 2021' },
 ]
 
 const ALL_YEARS = [...new Set(PORTFOLIO_ITEMS.map((i) => i.year))].sort((a, b) => b - a)

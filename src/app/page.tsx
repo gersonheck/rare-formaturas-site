@@ -52,6 +52,7 @@ export default function HomePage() {
         subheadline="Desde 2015, a Rare transforma o dia mais esperado da sua vida em uma celebração que você nunca vai esquecer."
         ctaText="Falar com a Rare no WhatsApp"
         ctaContext="formaturas"
+        backgroundVideo="/videos/hero-formatura.mp4"
       />
 
       {/* Stats */}

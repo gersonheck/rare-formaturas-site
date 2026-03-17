@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { Instagram, Facebook, Youtube, MapPin, Phone, Mail } from 'lucide-react'
 import { getWhatsAppUrl } from '@/lib/whatsapp'
 
@@ -53,10 +54,16 @@ export function Footer() {
           <div className="lg:col-span-1">
             <Link
               href="/"
-              className="font-display text-2xl font-bold text-gradient-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded inline-block"
+              className="focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded inline-block"
               aria-label="Rare Formaturas"
             >
-              Rare
+              <Image
+                src="/images/logo/logo-rare.png"
+                alt="Rare Formaturas"
+                width={120}
+                height={33}
+                className="h-9 w-auto"
+              />
             </Link>
             <p className="mt-3 text-sm text-neutral-500 leading-relaxed">
               Desde 2015 transformando formaturas em celebrações inesquecíveis em Navegantes e região.
